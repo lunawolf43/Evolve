@@ -27,7 +27,6 @@ public class GameViewSwing extends JComponent implements GameView{
 	
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		System.out.print("test");
 		g.setColor(Color.black);
 		g.fillRect(0, 0, getWidth(), getHeight());
 		
@@ -54,6 +53,11 @@ public class GameViewSwing extends JComponent implements GameView{
 			drawables[3].add(item);
 			break;
 		}
+	}
+
+	@Override
+	public void update() {
+		repaint();
 	}
 	
 }
