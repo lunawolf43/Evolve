@@ -5,7 +5,7 @@ import java.awt.Graphics;
 
 import gameEngine.Drawable;
 
-public class Creature implements Drawable{
+public class Fauna implements Drawable{
 
 	@Override
 	public void draw(Graphics g) {
