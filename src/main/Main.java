@@ -2,7 +2,6 @@ package main;
 
 import javax.swing.JFrame;
 
-import bio.Creature;
 import gameEngine.GameEngine;
 import gameEngine.GameView;
 
@@ -21,8 +20,6 @@ public class Main extends JFrame{
 		GameEngine engine = new GameEngine(new GameViewSwing());
 		add((GameViewSwing)engine.View);
 		setVisible(true);
-		
-		engine.View.addDrawable(new Creature(), GameView.Layer.ANIMAL);
 	}
 	
 }

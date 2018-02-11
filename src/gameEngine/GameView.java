@@ -14,4 +14,9 @@ public interface GameView {
 	 */
 	public void addDrawable(Drawable item, Layer layer);
 	
+	/**
+	 * Update the view to be current
+	 */
+	public void update();
+	
 }
