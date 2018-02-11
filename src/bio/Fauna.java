@@ -7,6 +7,10 @@ import gameEngine.Drawable;
 import gameEngine.GameEngine;
 import gameEngine.GameView.Layer;
 
+/**
+ * A creature of Fauna consists of two parts: the organs, which may have attached nerves, and the DNA, which
+ * lists organs and may be passed on. 
+ */
 public class Fauna implements Drawable{
 	public static GameEngine gameEngine;
 	public int x;
@@ -14,6 +18,9 @@ public class Fauna implements Drawable{
 	
 	public Fauna() {
 		gameEngine.View.addDrawable(this, Layer.ANIMAL);
+		
+		
+		
 	}
 
 	@Override
