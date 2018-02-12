@@ -7,10 +7,12 @@ import gameEngine.Drawable;
 public class Flora implements Drawable{
 	
 	int DNA[];
-	int DNAstruct[];
+	DNAstruct struct;
 	int weight = 0;
 	int ej_consumption = 0;
 	int ej_potential = 0;
+	int ej_production=0;
+	int mat_ore_retrieval = 0;
 	int mat_ore_consum[];
 	int age = 0;
 	
@@ -31,15 +33,15 @@ public class Flora implements Drawable{
 		//use DNA to determine the characteristics of the plant:
 		for (int i = 0; i < DNA.length%14; i++) {
 			//variables for the individual chunk of DNA
-			int type;
-			int children;
-			children = 0;
+			int type = 0;
+			int children = 0;
 			int structure[];
 			structure = new int[6];
-			int colora;
-			int colorb;
+			int colora=0;
+			int colorb=0;
 			int size;
 			size = 0;
+			DNAstruct = new int[DNA.length%14 * 3];
 			
 			for (j = 0; j < 14; j++){
 				
@@ -122,6 +124,12 @@ public class Flora implements Drawable{
 			lstrength *= size;
 			lgen*= size;
 			lret *= size;
+			
+			weight += lweight;
+			ej_potential+= lpot;
+			ej_consumption += lcons;
+			ej_production+=lgen;
+			mat_ore_retrieval += lret;
 			
 		}
 		
